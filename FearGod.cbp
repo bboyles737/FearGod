@@ -40,8 +40,12 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="GUI/GUIObj.cpp" />
+		<Unit filename="GUI/GUIObj.h" />
 		<Unit filename="GUI/Window.cpp" />
 		<Unit filename="GUI/Window.h" />
+		<Unit filename="General/Helpers.cpp" />
+		<Unit filename="General/Helpers.h" />
 		<Unit filename="General/Vec2.cpp" />
 		<Unit filename="General/Vec2.h" />
 		<Unit filename="General/Vec3f.cpp" />

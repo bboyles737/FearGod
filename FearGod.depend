@@ -8,3 +8,43 @@
 
 1486851213 d:\personal\programming\cpp\feargod\gui\window.h
 
+1487005595 source:h:\cs473\feargod\general\vec2.cpp
+	"Vec2.h"
+
+1487005580 h:\cs473\feargod\general\vec2.h
+
+1487020734 source:h:\cs473\feargod\main.cpp
+	<stdio.h>
+	"GL/freeglut.h"
+	"Window.h"
+	"Windows.h"
+
+1487005622 source:h:\cs473\feargod\general\vec3f.cpp
+	"Vec3f.h"
+
+1487005584 h:\cs473\feargod\general\vec3f.h
+
+1487008169 source:h:\cs473\feargod\general\helpers.cpp
+	"Helpers.h"
+	"GL/freeglut.h"
+
+1487006226 h:\cs473\feargod\general\helpers.h
+
+1487006117 source:h:\cs473\feargod\gui\guiobj.cpp
+	<stdio.h>
+	"GUIObj.h"
+	"GL/freeglut.h"
+
+1487005466 h:\cs473\feargod\gui\guiobj.h
+	"Vec2.h"
+	"Vec3f.h"
+
+1487020767 source:h:\cs473\feargod\gui\window.cpp
+	<stdio.h>
+	"Window.h"
+
+1487020373 h:\cs473\feargod\gui\window.h
+	<string>
+	"GL/freeglut.h"
+	"Vec2.h"
+

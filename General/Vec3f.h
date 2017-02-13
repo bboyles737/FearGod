@@ -5,12 +5,12 @@
 class Vec3f
 {
     public:
+        Vec3f();
+        Vec3f(double x, double y, double z);
+
         double x;
         double y;
         double z;
-
-        Vec3f(double x, double y, double z);
-
     protected:
 
     private:
