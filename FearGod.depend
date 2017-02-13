@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1486850679 source:d:\personal\programming\cpp\feargod\main.cpp
+	<stdio.h>
+	"GL/freeglut.h"
+
+1486851203 source:d:\personal\programming\cpp\feargod\gui\window.cpp
+	"Window.h"
+
+1486851213 d:\personal\programming\cpp\feargod\gui\window.h
+
