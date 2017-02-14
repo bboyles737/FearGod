@@ -53,6 +53,10 @@ void spec(int key, int mouseX, int mouseY) {
 
 }
 
+void passMouse(int mouseX, int mouseY) {
+    x.mouseHover(mouseX, mouseY);
+}
+
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
@@ -63,6 +67,7 @@ int main(int argc, char** argv) {
     glutInitWindowPosition(100, 50);
     glutCreateWindow("FEAR GOD and DREAD NOUGHT");
     glutSpecialFunc(spec);
+    glutPassiveMotionFunc(passMouse);
 
 
     //glMatrixMode(GL_PROJECTION);

@@ -8,6 +8,9 @@ class MapWindow : public GUIObj
     public:
         MapWindow(int sizeX, int sizeY);
 
+        void mouseHover(int mouseX, int mouseY);
+
+
     protected:
 
     private:

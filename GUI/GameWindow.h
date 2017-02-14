@@ -1,6 +1,8 @@
 #ifndef GAMEWINDOW_H
 #define GAMEWINDOW_H
 
+#include <vector>
+
 #include "GL/freeglut.h"
 #include "Vec2.h"
 #include "MapWindow.h"
@@ -16,6 +18,8 @@ class GameWindow
 
         void setView();
         void render();
+        void mouseHover(int mouseX, int mouseY);
+
 
     protected:
 
@@ -26,6 +30,8 @@ class GameWindow
         MsgWindow *msgW;
         SummaryWindow *sumW;
         DetailWindow *detW;
+
+        std::vector<GUIObj*> subWindows;
 
 };
 

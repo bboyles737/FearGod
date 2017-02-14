@@ -9,9 +9,16 @@ GUIObj::GUIObj(){
     this->setBGColor(1.0, 1.0, 1.0);
 }
 
+GUIObj::~GUIObj() {
+}
+
 void GUIObj::render() {
     glColor3f(this->bgColor.x, this->bgColor.y, this->bgColor.z);
     glRecti(this->pos.x, this->pos.y, this->pos.x + this->sz.x, this->pos.y + this->sz.y);
+}
+
+void GUIObj::mouseHover(int mouseX, int mouseY) {
+
 }
 
 void GUIObj::setSize(int x, int y) {
@@ -51,10 +58,10 @@ void GUIObj::setBGColorub(int r, int g, int b) {
 bool GUIObj::collide(int mouseX, int mouseY) {
     int screenxMin = this->pos.x;
     int screenxMax = this->pos.x + this->sz.x;
-    if (screenxMin < mouseX && screenxMax > mouseX) return true;
+    if (screenxMin > mouseX || screenxMax < mouseX) return false;
 
     int screenyMin = this->pos.y;
     int screenyMax = this->pos.y + this->sz.y;
-    if (screenyMin < mouseY && screenyMax > mouseY) return true;
-    return false;
+    if (screenyMin > mouseY || screenyMax < mouseY) return false;
+    return true;
 }
