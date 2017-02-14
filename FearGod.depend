@@ -16,18 +16,18 @@
 1487005595 source:h:\cs473\feargod\general\vec2.cpp
 	"Vec2.h"
 
-1487005580 h:\cs473\feargod\general\vec2.h
+1487077071 h:\cs473\feargod\general\vec2.h
 
-1487020734 source:h:\cs473\feargod\main.cpp
+1487077855 source:h:\cs473\feargod\main.cpp
 	<stdio.h>
 	"GL/freeglut.h"
-	"Window.h"
+	"GameWindow.h"
 	"Windows.h"
 
 1487005622 source:h:\cs473\feargod\general\vec3f.cpp
 	"Vec3f.h"
 
-1487005584 h:\cs473\feargod\general\vec3f.h
+1487077071 h:\cs473\feargod\general\vec3f.h
 
 1487008169 source:h:\cs473\feargod\general\helpers.cpp
 	"Helpers.h"
@@ -35,12 +35,12 @@
 
 1487006226 h:\cs473\feargod\general\helpers.h
 
-1487006117 source:h:\cs473\feargod\gui\guiobj.cpp
+1487077071 source:h:\cs473\feargod\gui\guiobj.cpp
 	<stdio.h>
 	"GUIObj.h"
 	"GL/freeglut.h"
 
-1487005466 h:\cs473\feargod\gui\guiobj.h
+1487077813 h:\cs473\feargod\gui\guiobj.h
 	"Vec2.h"
 	"Vec3f.h"
 
@@ -123,5 +123,52 @@
 
 1487041127 source:d:\personal\programming\cpp\feargod\gui\mapwindow.cpp
 	"MapWindow.h"
+	<stdio.h>
+
+1487077071 source:h:\cs473\feargod\gui\detailwindow.cpp
+	"DetailWindow.h"
+	<stdio.h>
+
+1487077071 h:\cs473\feargod\gui\detailwindow.h
+	"GUIObj.h"
+
+1487078084 source:h:\cs473\feargod\gui\gamewindow.cpp
+	"GameWindow.h"
+
+1487077071 h:\cs473\feargod\gui\gamewindow.h
+	<vector>
+	"GL/freeglut.h"
+	"Vec2.h"
+	"MapWindow.h"
+	"MsgWindow.h"
+	"SummaryWindow.h"
+	"DetailWindow.h"
+
+1487078211 h:\cs473\feargod\gui\mapwindow.h
+	"GUIObj.h"
+
+1487077071 h:\cs473\feargod\gui\msgwindow.h
+	"GUIObj.h"
+
+1487077071 h:\cs473\feargod\gui\summarywindow.h
+	"GUIObj.h"
+
+1487077994 source:h:\cs473\feargod\gui\mapwindow.cpp
+	"MapWindow.h"
+	<stdio.h>
+
+1487077071 source:h:\cs473\feargod\gui\msgwindow.cpp
+	"MsgWindow.h"
+	<stdio.h>
+
+1487077071 source:h:\cs473\feargod\gui\subwindow.cpp
+	"SubWindow.h"
+
+1487077071 h:\cs473\feargod\gui\subwindow.h
+	"Vec2.h"
+	"GUIObj.h"
+
+1487077071 source:h:\cs473\feargod\gui\summarywindow.cpp
+	"SummaryWindow.h"
 	<stdio.h>
 

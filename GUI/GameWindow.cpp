@@ -33,6 +33,7 @@ void GameWindow::setView() {
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluOrtho2D(0.0, 1440.0, 900.0, 0.0);    // Note Y-axis inversion
+    glViewport(0, 0, 1440, 900);
 }
 
 /**** Checks to see which sub-window the mouse cursor is over, and then calls the associated
@@ -46,7 +47,11 @@ void GameWindow::mouseHover(int mouseX, int mouseY) {
 
 /**** Draws the sub-windows using their specific render methods. */
 void GameWindow::render() {
-    for (unsigned int i = 0; i < this->subWindows.size(); i++) {
+    // Need to treat the map window rendering separately because
+    // it uses a different gluOrtho2D and viewport from the rest
+    this->mapW->render();
+    this->setView();
+    for (unsigned int i = 1; i < this->subWindows.size(); i++) {
         GUIObj *curWindow = this->subWindows.at(i);
         curWindow->render();
     }

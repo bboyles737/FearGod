@@ -9,7 +9,7 @@ class GUIObj
     public:
         GUIObj();
         virtual ~GUIObj();
-        void render();
+        virtual void render();
         void setSize(int x, int y);
         void setPos(int x, int y);
         void setBGColor(double r, double g, double b);

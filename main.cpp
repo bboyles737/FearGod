@@ -67,7 +67,7 @@ int main(int argc, char** argv) {
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
 
     glutInitWindowSize(1440, 900);
-    glutInitWindowPosition(100, 50);
+    glutInitWindowPosition(450, 50);
     glutCreateWindow("Fear God and Dreadnought");
 
     glutSpecialFunc(specialKeys);
