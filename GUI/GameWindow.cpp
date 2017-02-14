@@ -16,10 +16,11 @@ GameWindow::GameWindow(int sizeX, int sizeY) {
 void GameWindow::setView() {
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluOrtho2D(0.0, 1440.0, 0.0, 900.0);
+    gluOrtho2D(0.0, 1440.0, 900.0, 0.0);    // Note Y-axis inversion
 }
 
 void GameWindow::mouseHover(int mouseX, int mouseY) {
+    //mouseY = this->sz.y - mouseY;
     for (unsigned int i = 0; i < this->subWindows.size(); i++) {
         GUIObj *curWindow = this->subWindows.at(i);
         if (curWindow->collide(mouseX, mouseY)) curWindow->mouseHover(mouseX, mouseY);
