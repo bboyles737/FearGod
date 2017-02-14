@@ -1,5 +1,23 @@
 #include "Helpers.h"
 
+#include <cmath>
+
+double toRadians(double degrees) {
+    return (degrees / 180.0) * 3.14159;
+}
+
+double normalizeDeg(double degrees) {
+    while (degrees > 360.0) degrees -= 360.0;
+    while (degrees < 0.0) degrees += 360.0;
+    return degrees;
+}
+
+double truncate(double amt, int dec) {
+    amt *= pow(10, dec);
+    amt = trunc(amt);
+    return amt / pow(10, dec);
+}
+
 void drawStringBitmap(double drawX, double drawY, std::string drawStr,
                       void* font) {
     glRasterPos2f(drawX, drawY);// Position to start drawing in world coordinates

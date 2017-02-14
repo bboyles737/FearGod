@@ -69,6 +69,10 @@ void mouseClick(int button, int state, int mouseX, int mouseY) {
     glutPostRedisplay();
 }
 
+void noReshape(int newWidth, int newHeight) {
+    glutReshapeWindow(1440, 900);
+}
+
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
@@ -80,6 +84,7 @@ int main(int argc, char** argv) {
     glutSpecialFunc(specialKeys);
     glutMouseFunc(mouseClick);
     glutPassiveMotionFunc(passiveMouse);
+    glutReshapeFunc(noReshape);
 
     glutDisplayFunc(display);
 

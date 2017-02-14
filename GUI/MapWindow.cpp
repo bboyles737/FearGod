@@ -29,14 +29,16 @@ void MapWindow::enableZooming() {
 }
 
 void MapWindow::zoomIn() {
-    int newZoom = mapZoom / 2;
+    int newZoom = this->mapZoom / 2;
     if (newZoom < 100) newZoom = 100;
     this->zoomTo(newZoom);
     printf ("Map zoomed in to level: %d\n", this->mapZoom);
 }
 
 void MapWindow::zoomOut() {
-    this->zoomTo(this->mapZoom * 2);
+    int newZoom = this->mapZoom * 2;
+    if (newZoom > 6400) newZoom = 6400;
+    this->zoomTo(newZoom);
     printf ("Map zoomed out to level: %d\n", this->mapZoom);
     this->recalcMapSize();
 }

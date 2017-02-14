@@ -29,10 +29,11 @@
 
 1487077071 h:\cs473\feargod\general\vec3f.h
 
-1487099799 source:h:\cs473\feargod\general\helpers.cpp
+1487106866 source:h:\cs473\feargod\general\helpers.cpp
 	"Helpers.h"
+	<cmath>
 
-1487099647 h:\cs473\feargod\general\helpers.h
+1487106844 h:\cs473\feargod\general\helpers.h
 	<string>
 	"GL/freeglut.h"
 
@@ -154,7 +155,7 @@
 1487077071 h:\cs473\feargod\gui\summarywindow.h
 	"GUIObj.h"
 
-1487102987 source:h:\cs473\feargod\gui\mapwindow.cpp
+1487107505 source:h:\cs473\feargod\gui\mapwindow.cpp
 	"MapWindow.h"
 	"Helpers.h"
 	"GL/freeglut.h"
@@ -185,4 +186,17 @@
 
 1487099175 source:h:\cs473\feargod\general\vec3d.cpp
 	"Vec3d.h"
+
+1487107417 source:h:\cs473\feargod\unit\unit.cpp
+	"Unit.h"
+	"helpers.h"
+	<cmath>
+
+1487106589 h:\cs473\feargod\unit\unit.h
+	"Vec2.h"
+	"Vec2d.h"
+	"SideEnum.h"
+	<string>
+
+1487106898 h:\cs473\feargod\general\sideenum.h
 
