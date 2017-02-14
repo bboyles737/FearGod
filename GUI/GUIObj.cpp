@@ -18,7 +18,9 @@ void GUIObj::render() {
 }
 
 void GUIObj::mouseHover(int mouseX, int mouseY) {
+}
 
+void GUIObj::mouseClick(int button, int state, int mouseX, int mouseY) {
 }
 
 void GUIObj::setSize(int x, int y) {
@@ -43,7 +45,7 @@ void GUIObj::setBGColor(double r, double g, double b) {
                r, g, b);
        return;
     }
-    this->bgColor = Vec3f(r, g, b);
+    this->bgColor = Vec3d(r, g, b);
 }
 
 void GUIObj::setBGColorub(int r, int g, int b) {
@@ -52,7 +54,7 @@ void GUIObj::setBGColorub(int r, int g, int b) {
                r, g, b);
         return;
     }
-    this->bgColor = Vec3f(r / 255.0, g / 255.0, b / 255.0);
+    this->bgColor = Vec3d(r / 255.0, g / 255.0, b / 255.0);
 }
 
 bool GUIObj::collide(int mouseX, int mouseY) {

@@ -5,7 +5,7 @@
 DetailWindow::DetailWindow(int sizeX, int sizeY)
 {
     this->setSize(sizeX, sizeY);
-    this->setPos(960, 300);
+    this->setPos(1060, 300);
     this->setBGColor(0.3, 0.3, 0.3);
 }
 

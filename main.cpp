@@ -62,6 +62,11 @@ void passiveMouse(int mouseX, int mouseY) {
     gameW.mouseHover(mouseX, mouseY);
 }
 
+void mouseClick(int button, int state, int mouseX, int mouseY) {
+    gameW.mouseClick(button, state, mouseX, mouseY);
+    glutPostRedisplay();
+}
+
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
@@ -71,6 +76,7 @@ int main(int argc, char** argv) {
     glutCreateWindow("Fear God and Dreadnought");
 
     glutSpecialFunc(specialKeys);
+    glutMouseFunc(mouseClick);
     glutPassiveMotionFunc(passiveMouse);
 
     glutDisplayFunc(display);

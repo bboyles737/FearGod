@@ -5,7 +5,7 @@
 SummaryWindow::SummaryWindow(int sizeX, int sizeY)
 {
     this->setSize(sizeX, sizeY);
-    this->setPos(960, 0);
+    this->setPos(1060, 0);
     this->setBGColor(0.0, 0.0, 1.0);
 }
 

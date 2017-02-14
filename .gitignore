@@ -1,5 +1,6 @@
 # No .exes
 *.exe
+*.o
 
 # Windows image file caches
 Thumbs.db

@@ -5,10 +5,10 @@
     */
 GameWindow::GameWindow(int sizeX, int sizeY) {
     this->sz = Vec2(sizeX, sizeY);
-    this->mapW = new MapWindow(960, 700);
-    this->msgW = new MsgWindow(960, 200);
-    this->sumW = new SummaryWindow(480, 300);
-    this->detW = new DetailWindow(480, 600);
+    this->mapW = new MapWindow(1060, 700);
+    this->msgW = new MsgWindow(1060, 200);
+    this->sumW = new SummaryWindow(380, 300);
+    this->detW = new DetailWindow(380, 600);
 
     this->subWindows.push_back(this->mapW);
     this->subWindows.push_back(this->msgW);
@@ -42,6 +42,15 @@ void GameWindow::mouseHover(int mouseX, int mouseY) {
     for (unsigned int i = 0; i < this->subWindows.size(); i++) {
         GUIObj *curWindow = this->subWindows.at(i);
         if (curWindow->collide(mouseX, mouseY)) curWindow->mouseHover(mouseX, mouseY);
+    }
+}
+
+/**** Checks to see which sub-window the mouse cursor is over when clicked, and then calls the associated
+    * mouse hover method for that sub-window. */
+void GameWindow::mouseClick(int button, int state, int mouseX, int mouseY) {
+    for (unsigned int i = 0; i < this->subWindows.size(); i++) {
+        GUIObj *curWindow = this->subWindows.at(i);
+        if (curWindow->collide(mouseX, mouseY)) curWindow->mouseClick(button, state, mouseX, mouseY);
     }
 }
 
