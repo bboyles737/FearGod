@@ -56,6 +56,8 @@ void display() {
 }
 
 void specialKeys(int key, int mouseX, int mouseY) {
+    if (key == GLUT_KEY_PAGE_UP) gameW.getMap()->enableCentering();
+    else if (key == GLUT_KEY_PAGE_DOWN) gameW.getMap()->enableZooming();
 }
 
 void passiveMouse(int mouseX, int mouseY) {

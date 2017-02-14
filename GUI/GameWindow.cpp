@@ -65,3 +65,5 @@ void GameWindow::render() {
         curWindow->render();
     }
 }
+
+MapWindow *GameWindow::getMap() {return this->mapW;}

@@ -19,6 +19,8 @@ class MapWindow : public GUIObj
         void zoomTo(int newZoom);
 
         void setGridLabels(bool newValue);
+        void enableCentering();
+        void enableZooming();
 
         Vec2 scrToMap(int mouseX, int mouseY);
 
@@ -26,6 +28,8 @@ class MapWindow : public GUIObj
         int mapRight();
         int mapTop();
         int mapBot();
+        int mapCentX();
+        int mapCentY();
         int mapXSize();
         int mapYSize();
         int yInv(); // Takes care of inverting mouse coords
@@ -39,7 +43,9 @@ class MapWindow : public GUIObj
         int mapZoom;        // In yards, along the vertical axis
         int gridSpacing;
         bool showGridLabels;
+        bool centerMode;
 
+        void recalcMapSize();   // After we zoom
         void drawGridlines(int spacing);
 
 };

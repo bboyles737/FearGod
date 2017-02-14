@@ -27,6 +27,8 @@ class GameWindow
         void mouseHover(int mouseX, int mouseY);    // Calls the mouseHover method for whichever sub section the cursor is hovering over
         void mouseClick(int button, int state, int mouseX, int mouseY);
 
+        MapWindow *getMap();
+
     protected:
 
     private:
