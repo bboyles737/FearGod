@@ -40,10 +40,20 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="GUI/DetailWindow.cpp" />
+		<Unit filename="GUI/DetailWindow.h" />
 		<Unit filename="GUI/GUIObj.cpp" />
 		<Unit filename="GUI/GUIObj.h" />
-		<Unit filename="GUI/Window.cpp" />
-		<Unit filename="GUI/Window.h" />
+		<Unit filename="GUI/GameWindow.cpp" />
+		<Unit filename="GUI/GameWindow.h" />
+		<Unit filename="GUI/MapWindow.cpp" />
+		<Unit filename="GUI/MapWindow.h" />
+		<Unit filename="GUI/MsgWindow.cpp" />
+		<Unit filename="GUI/MsgWindow.h" />
+		<Unit filename="GUI/SubWindow.cpp" />
+		<Unit filename="GUI/SubWindow.h" />
+		<Unit filename="GUI/SummaryWindow.cpp" />
+		<Unit filename="GUI/SummaryWindow.h" />
 		<Unit filename="General/Helpers.cpp" />
 		<Unit filename="General/Helpers.h" />
 		<Unit filename="General/Vec2.cpp" />
