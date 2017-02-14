@@ -154,10 +154,12 @@
 1487077071 h:\cs473\feargod\gui\summarywindow.h
 	"GUIObj.h"
 
-1487100909 source:h:\cs473\feargod\gui\mapwindow.cpp
+1487102987 source:h:\cs473\feargod\gui\mapwindow.cpp
 	"MapWindow.h"
+	"Helpers.h"
 	"GL/freeglut.h"
 	<stdio.h>
+	<sstream>
 
 1487077071 source:h:\cs473\feargod\gui\msgwindow.cpp
 	"MsgWindow.h"
