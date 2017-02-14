@@ -5,13 +5,13 @@
 
 GUIObj::GUIObj(){
     this->pos = Vec2(0, 0);
-    this->size = Vec2(100, 100);
+    this->sz = Vec2(100, 100);
     this->setBGColor(1.0, 1.0, 1.0);
 }
 
 void GUIObj::render() {
     glColor3f(this->bgColor.x, this->bgColor.y, this->bgColor.z);
-
+    glRecti(this->pos.x, this->pos.y, this->pos.x + this->sz.x, this->pos.y + this->sz.y);
 }
 
 void GUIObj::setSize(int x, int y) {
@@ -19,7 +19,7 @@ void GUIObj::setSize(int x, int y) {
         printf("GUI Object size %d, %d can't be negative.\n", x, y);
         return;
     }
-    this->size = Vec2(x, y);
+    this->sz = Vec2(x, y);
 }
 
 void GUIObj::setPos(int x, int y) {
@@ -50,11 +50,11 @@ void GUIObj::setBGColorub(int r, int g, int b) {
 
 bool GUIObj::collide(int mouseX, int mouseY) {
     int screenxMin = this->pos.x;
-    int screenxMax = this->pos.x + this->size.x;
+    int screenxMax = this->pos.x + this->sz.x;
     if (screenxMin < mouseX && screenxMax > mouseX) return true;
 
     int screenyMin = this->pos.y;
-    int screenyMax = this->pos.y + this->size.y;
+    int screenyMax = this->pos.y + this->sz.y;
     if (screenyMin < mouseY && screenyMax > mouseY) return true;
     return false;
 }

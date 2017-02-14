@@ -17,7 +17,7 @@ class GUIObj
 
     protected:
         Vec2 pos;
-        Vec2 size;
+        Vec2 sz;
         Vec3f bgColor;
 
     private:

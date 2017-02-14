@@ -1,12 +1,17 @@
 # depslib dependency file v1.0
-1486850679 source:d:\personal\programming\cpp\feargod\main.cpp
+1487039188 source:d:\personal\programming\cpp\feargod\main.cpp
 	<stdio.h>
 	"GL/freeglut.h"
+	"GameWindow.h"
+	"Windows.h"
 
-1486851203 source:d:\personal\programming\cpp\feargod\gui\window.cpp
+1487034377 source:d:\personal\programming\cpp\feargod\gui\window.cpp
 	"Window.h"
 
-1486851213 d:\personal\programming\cpp\feargod\gui\window.h
+1487034320 d:\personal\programming\cpp\feargod\gui\window.h
+	<string>
+	"GL/freeglut.h"
+	"Vec2.h"
 
 1487005595 source:h:\cs473\feargod\general\vec2.cpp
 	"Vec2.h"
@@ -47,4 +52,71 @@
 	<string>
 	"GL/freeglut.h"
 	"Vec2.h"
+
+1487028181 source:d:\personal\programming\cpp\feargod\general\helpers.cpp
+	"Helpers.h"
+	"GL/freeglut.h"
+
+1487028181 d:\personal\programming\cpp\feargod\general\helpers.h
+
+1487028181 source:d:\personal\programming\cpp\feargod\general\vec2.cpp
+	"Vec2.h"
+
+1487028181 d:\personal\programming\cpp\feargod\general\vec2.h
+
+1487028181 source:d:\personal\programming\cpp\feargod\general\vec3f.cpp
+	"Vec3f.h"
+
+1487028181 d:\personal\programming\cpp\feargod\general\vec3f.h
+
+1487038903 source:d:\personal\programming\cpp\feargod\gui\guiobj.cpp
+	<stdio.h>
+	"GUIObj.h"
+	"GL/freeglut.h"
+
+1487038793 d:\personal\programming\cpp\feargod\gui\guiobj.h
+	"Vec2.h"
+	"Vec3f.h"
+
+1487039241 source:d:\personal\programming\cpp\feargod\gui\detailwindow.cpp
+	"DetailWindow.h"
+
+1487038046 d:\personal\programming\cpp\feargod\gui\detailwindow.h
+	"GUIObj.h"
+
+1487039182 source:d:\personal\programming\cpp\feargod\gui\gamewindow.cpp
+	"GameWindow.h"
+
+1487039140 d:\personal\programming\cpp\feargod\gui\gamewindow.h
+	"GL/freeglut.h"
+	"Vec2.h"
+	"MapWindow.h"
+	"MsgWindow.h"
+	"SummaryWindow.h"
+	"DetailWindow.h"
+
+1487037803 d:\personal\programming\cpp\feargod\gui\mapwindow.h
+	"GUIObj.h"
+
+1487037882 d:\personal\programming\cpp\feargod\gui\msgwindow.h
+	"GUIObj.h"
+
+1487037983 d:\personal\programming\cpp\feargod\gui\summarywindow.h
+	"GUIObj.h"
+
+1487039224 source:d:\personal\programming\cpp\feargod\gui\msgwindow.cpp
+	"MsgWindow.h"
+
+1487034710 source:d:\personal\programming\cpp\feargod\gui\subwindow.cpp
+	"SubWindow.h"
+
+1487034682 d:\personal\programming\cpp\feargod\gui\subwindow.h
+	"Vec2.h"
+	"GUIObj.h"
+
+1487039232 source:d:\personal\programming\cpp\feargod\gui\summarywindow.cpp
+	"SummaryWindow.h"
+
+1487037834 source:d:\personal\programming\cpp\feargod\gui\mapwindow.cpp
+	"MapWindow.h"
 

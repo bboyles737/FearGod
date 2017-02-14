@@ -1,12 +1,10 @@
 #include <stdio.h>
 
 #include "GL/freeglut.h"
-#include "Window.h"
+#include "GameWindow.h"
 #include "Windows.h"
 
-Window mw = Window("Fear God");
-Window mx = Window("Fear Blue");
-int mode = 1;
+GameWindow x = GameWindow(1440, 900);
 
 void idleA() {
     Sleep(100);
@@ -16,11 +14,6 @@ void idleA() {
 void idleB() {
     Sleep(33);
     printf("Window B Idler\n");
-}
-
-void idleC() {
-    Sleep(100);
-    printf("Current window active: %d in mode %d\n", glutGetWindow(), mode);
 }
 
 void dispBlack() {
@@ -47,19 +40,17 @@ void dispBlue() {
     glutSwapBuffers();
 }
 
+void display() {
+    glClearColor(0.0, 0.0, 0.0, 1.0);
+    glClear(GL_COLOR_BUFFER_BIT);
+    x.setView();
+    x.render();
+
+    glutSwapBuffers();
+}
+
 void spec(int key, int mouseX, int mouseY) {
-    if (key == GLUT_KEY_PAGE_DOWN) mode = mode - 1;
-    else if (key == GLUT_KEY_PAGE_UP) mode = mode + 1;
-    if (mode <= 0) mode += 3;
-    else  if (mode > 3) mode -= 3;
 
-
-    if (key == GLUT_KEY_UP) mw.setDisplay(dispRed, mode);
-    else if (key == GLUT_KEY_DOWN) mw.setDisplay(dispBlue, mode);
-    else if (key == GLUT_KEY_LEFT) mw.setDisplay(dispGreen, mode);
-    else if (key == GLUT_KEY_RIGHT) mw.setDisplay(dispBlack, mode);
-
-    glutPostRedisplay();
 }
 
 int main(int argc, char** argv) {
@@ -67,30 +58,17 @@ int main(int argc, char** argv) {
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
 
 
-    mw.setDisplay(dispBlue);
-    mw.gen();
 
-
-
-    /*
-    mx.setPos(500, 0);
-    mx.setSize(300, 300);
-    mx.setDisplay(dispRed);
-    mx.gen();
-    */
-    glutSpecialFunc(spec);
-
-    glutIdleFunc(idleC);
-
-    //mx.setIdle(idleB);
-    /*glutInitWindowSize(1440, 900);
+    glutInitWindowSize(1440, 900);
     glutInitWindowPosition(100, 50);
     glutCreateWindow("FEAR GOD and DREAD NOUGHT");
+    glutSpecialFunc(spec);
 
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    gluOrtho2D(0.0, 5.0, -2.5, 2.5);
-    glutDisplayFunc(dispRed);
-    */
+
+    //glMatrixMode(GL_PROJECTION);
+    //glLoadIdentity();
+    //gluOrtho2D(0.0, 5.0, -2.5, 2.5);
+    glutDisplayFunc(display);
+
     glutMainLoop();
 }
