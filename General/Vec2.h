@@ -1,7 +1,7 @@
 #ifndef VEC2_H
 #define VEC2_H
 
-
+/**** Vec2 is a simple class for a tuple of two Integers */
 class Vec2
 {
     public:

@@ -4,8 +4,10 @@
 #include "GameWindow.h"
 #include "Windows.h"
 
-GameWindow x = GameWindow(1440, 900);
+GameWindow gameW = GameWindow(1440, 900);
 
+/** Debugging idle and display functions - to be deleted or ignored.
+  */
 void idleA() {
     Sleep(100);
     printf("Window A Idler\n");
@@ -40,39 +42,37 @@ void dispBlue() {
     glutSwapBuffers();
 }
 
+
+
+
 void display() {
     glClearColor(0.0, 0.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
-    x.setView();
-    x.render();
+
+    gameW.setView();
+    gameW.render();
 
     glutSwapBuffers();
 }
 
-void spec(int key, int mouseX, int mouseY) {
-
+void specialKeys(int key, int mouseX, int mouseY) {
 }
 
-void passMouse(int mouseX, int mouseY) {
-    x.mouseHover(mouseX, mouseY);
+void passiveMouse(int mouseX, int mouseY) {
+    gameW.mouseHover(mouseX, mouseY);
 }
 
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
 
-
-
     glutInitWindowSize(1440, 900);
     glutInitWindowPosition(100, 50);
-    glutCreateWindow("FEAR GOD and DREAD NOUGHT");
-    glutSpecialFunc(spec);
-    glutPassiveMotionFunc(passMouse);
+    glutCreateWindow("Fear God and Dreadnought");
 
+    glutSpecialFunc(specialKeys);
+    glutPassiveMotionFunc(passiveMouse);
 
-    //glMatrixMode(GL_PROJECTION);
-    //glLoadIdentity();
-    //gluOrtho2D(0.0, 5.0, -2.5, 2.5);
     glutDisplayFunc(display);
 
     glutMainLoop();
